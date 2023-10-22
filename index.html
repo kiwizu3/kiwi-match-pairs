@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -26,7 +26,7 @@
 
     <title>Match the Pairs</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;600&family=Playfair+Display:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&family=Outfit:wght@100;400;600&family=Playfair+Display:wght@400;700&display=swap');
 
         html,
         body {
@@ -42,6 +42,10 @@
             background-color: #180930;
             height: 100vh;
             margin: 0;
+        }
+
+        .bg-purple {
+            background-color: #180930;
         }
 
         .game-container {
@@ -100,13 +104,14 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            font-family: 'Noto Color Emoji', sans-serif !important;
             font-size: 2.5rem;
-            background-color: #373b3e;
+            background-color: #d1d1d1;
             backface-visibility: hidden;
         }
 
         .back-face {
-            background-color: #373b3e;
+            background-color: #ffffff;
             transform: rotateY(180deg);
         }
 
@@ -133,11 +138,18 @@
 
         .halloween-image {
             position: absolute;
-            top: 2rem;
+            top: 0rem;
         }
-        .bats-image{
+
+        .bats-image {
             position: absolute;
-            bottom: 2rem;
+            bottom: 0rem;
+        }
+
+        .icon-font {
+            font-size: 1.5rem;
+            padding: 0rem;
+            color: #fff;
         }
     </style>
 </head>
@@ -246,11 +258,11 @@
     <div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="winModalLabel"
         aria-hidden="true">
         <div class="modal-dialog pt-p65" role="document">
-            <div class="modal-content">
+            <div class="modal-content bg-purple">
                 <div class="modal-header">
                     <h5 class="modal-title" id="winModalLabel">Congratulations!</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                    <button type="button" class="btn btn-transparent p-0 close" data-dismiss="modal" aria-label="Close">
+                        <p aria-hidden="true" class="mb-0 p-0 icon-font">&times;</p>
                     </button>
                 </div>
                 <div class="modal-body">
